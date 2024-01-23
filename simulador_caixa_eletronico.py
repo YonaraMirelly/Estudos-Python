@@ -1,5 +1,5 @@
 print('='*30)
-print('{:^30}'.format(' BANCO SEVERINA '))
+print('{:^30}'.format('BANCO SEVERINA'))
 print('='*30)
 n = int(input('Que valor você quer sacar? R$'))
 totalced = 0
