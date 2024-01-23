@@ -10,6 +10,6 @@ for pess in range(1, 8):
         totalmaior += 1
     else:
         totalmenor += 1
-print('Ao todo, tivemos {} pessoas maiores de idade.'.format(totalmaior))
-print('E também tivemos {} pessoas menores de idade'.format(totalmenor))
+print('Ao todo, tivemos {} pessoas \033[1mmaiores de idade.\033[m'.format(totalmaior))
+print('E também tivemos {} pessoas \033[1mmenores de idade\033[m'.format(totalmenor))
 input()
