@@ -1,8 +1,8 @@
 #título bonitinho
 from datetime import date
-print('\033[1;36m+\033[m' * 30)
+print('\033[1;36m+\033[m' * 32)
 print('CONFEDERAÇÃO NACIONAL DE NATAÇÃO')
-print('\033[1;36m+\033[m' * 30)
+print('\033[1;36m+\033[m' * 32)
 #ler ano de nascimento
 num = int(input('Informe o ANO em que você nasceu: '))
 anoatual = date.today().year
