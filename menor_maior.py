@@ -12,6 +12,6 @@ if b>a and b>c:
     maior = b
 if c>a and c>b:
     maior = c
-print('O MAIOR valor digitado foi \033[1;36m{}\033[m:)'.format(maior))
+print('O MAIOR valor digitado foi \033[1;36m{}\033[m :)'.format(maior))
 input()
 
