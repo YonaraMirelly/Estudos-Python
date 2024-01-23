@@ -15,6 +15,6 @@ while not acertou:
             print('Mais... tente de novo.')
         elif jogador > computador:
             print('Menos... tente de novo.')
-print('Acertou! Com um total de {} tentativas, Parabéns!'.format(tenta))
-print('O pc pensou no número {}:)'.format(pc))
+print('Acertou! Com um total de {} tentativas, \033[1;32mParabéns!\033[m'.format(tenta))
+print('O pc pensou no número {} :)'.format(pc))
 input()
