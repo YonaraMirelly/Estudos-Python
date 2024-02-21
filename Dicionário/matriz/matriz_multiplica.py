@@ -31,7 +31,7 @@ for a in range(0,qtde_linhas2):
         print(m2[(a,b)], end = ' ')
     print()
 
-if qtde_colunas != qtde_colunas2:
+if qtde_colunas != qtde_linhas2:
     print("Matrizes com dimensões diferentes!")
 else:
     resultado = {}

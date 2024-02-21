@@ -12,6 +12,7 @@ dic = {
     'nota3': nota3,
     'nota4': nota4,
 }
+
 media = (nota1 + nota2 + nota3+ nota4) / 4
 print(dic)
 print(media)

@@ -18,7 +18,6 @@ for i in range(qtde_linhas):
         print(f'{m1[(i,j)]:^5}', end = ' ')
     print()
 
-#t
 
 for i in range(qtde_coluna-1):
     m1[(1,i)], m1[(2,i)] = m1[(2,i)], m1[(1,i)]

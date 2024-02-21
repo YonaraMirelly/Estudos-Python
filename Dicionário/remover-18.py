@@ -8,11 +8,13 @@ while True:
     resp = str(input("Deseja adicionar + alguém? [S/N] ")).upper()
     print('-'*20)
     if resp == "N":
-        if d[cpf]['idade'] <18:
-            d1 = d.copy()
-            d2 = d1.pop(cpf)
-            print(f'Aqui pessoas menores de 18: {d2}')
-            print(f'Aqui temos o dicionario sem pessoas menores de 18 anos: {d}')
+        for elemento in d:
+            if d[cpf]['idade'] <18:
+                d1 = d.copy()
+                d2 = d1.pop(cpf)
+                print(f'Aqui pessoas menores de 18: {d2}')
+                print(f'Aqui temos o dicionario com todas as pessoas: {d}')
+                break
 
 
     
