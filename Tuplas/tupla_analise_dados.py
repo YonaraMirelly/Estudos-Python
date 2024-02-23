@@ -13,5 +13,5 @@ else:
 print(f'Os valores PARES digitados foram ' , end = '')
 for numeros in lista:
     if numeros % 2 ==0:
-        print(f'{numeros}', end = ' ')
+        print(f'[{numeros}]', end = ' ')
 input()
