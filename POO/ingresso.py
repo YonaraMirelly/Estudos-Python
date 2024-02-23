@@ -17,5 +17,5 @@ class VIP(Ingresso):
 ingresso = Ingresso(50)
 vip = VIP(50,30)
 
-ingresso.ImprimeValor()
+print(ingresso.ImprimeValor())
 print(f'Ingresso VIP-> {vip.adicionar():.2f}')

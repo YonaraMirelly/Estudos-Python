@@ -6,7 +6,6 @@ dic = {}
 
 for linha in linhas:
     chave, elemento = linha.strip().split(' ')
-
     dic[chave] = elemento
 
 print(dic)
