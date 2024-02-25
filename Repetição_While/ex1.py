@@ -109,3 +109,97 @@
 #    print('fim do programa')
 #Fatorial(2)
 
+
+#contador = 0
+#numero = 2
+#while contador <15:
+#    divisor = 2
+#    while divisor < numero:
+#        if numero % divisor == 0:
+#            break
+#        divisor +=1
+#    else:
+#        print(numero, end = ' - ')
+#        contador +=1
+#    numero +=1
+
+#def primo(n):
+#    contador = 0
+#    numero = 2
+#    while contador <n:
+#        divisor = 2
+#        while divisor < numero:
+#            if numero %divisor ==0:
+#                break
+#            divisor+=1
+#        else:
+#            print(numero, end = ' - ')
+#            contador +=1
+#        numero +=1
+#primo(20)
+
+#base = int(input("base -> "))
+#exp = int(input('Expoente -> '))
+#resultado = 1
+#cont = 0
+#while cont<exp:
+#    resultado *=base
+#    cont +=1
+#print(f'{resultado}')
+
+#def Potencia(base, exp):
+#    cont = 0
+#    result = 1
+#    while cont<exp:
+#        result *=base
+#        cont +=1
+#    print(f'{result}')
+#Potencia(2,3)
+
+#cont = 0
+#while cont < 5:
+#    valor = int(input("Digite um número -> "))
+#    if valor<0:
+#        print('Não pode numero negativo mô')
+#        break
+#    cont+=1
+#else:
+#    print('Os 5 dados foram inseridos com sucesso!')
+#print('fim do programa!')
+
+#def Valores(n = 5):
+#    cont = 0
+#    while cont<n:
+#        numero = int(input('Número -> '))
+#        if numero <0:
+#            print('não pode negativo')
+#            break
+#        cont +=1
+#    else:
+#        print('Os 5 valores adicionados com sucesso!')
+#Valores()
+
+#while True:
+#    n = int(input('Tabuada de -> '))
+#    print(f'TABUADA DE {n}:')
+#    contador = 0
+#    while contador <= 10:
+#        print(f'{n} x {contador} = {n * contador}')
+#        contador +=1
+#    continuar = str(input("Deseja ver a tabuada de outro número? [S/N] ")).lower()
+#    if continuar != "S":
+#        print('fim')
+#        break
+
+#def Tabuada(numero):
+#    while True:
+#        cont = 0
+#        while cont <=10:
+#            print(f'{numero} x {cont} = {numero * cont}')
+#            cont +=1
+#        continuar = input('Deseja continuar? [S/N] ').lower()
+#        if continuar != 'S':
+#            print('fim')
+#            break
+#Tabuada(4)
+
