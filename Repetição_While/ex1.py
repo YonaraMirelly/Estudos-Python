@@ -80,13 +80,32 @@
 #    print(f'{l} são numeros impares positivos.')
 #Impar()
 
-n = int(input('Fatorial de -> '))
-c = n
-f = 1
-while c>0:
-    print(f'{c}', end = '')
-    print(' x ' if c >1 else ' = ', end = '')
-    f *=c
-    c-=1
-print(f'{f}')
+#n = int(input('Fatorial de -> '))
+#f = 1
+#c = n
+#if n >20:
+#    print('Digite um número menor doq 20!!!!!!!')
+#else:
+#    while c >0:
+#        print(f'{c}', end = '')
+#        print(' x ' if c>1 else ' = ', end = '')
+#        f *=c
+#        c-=1
+#    print(f'{f}')
+#print('fim do programa!')
+
+#def Fatorial(n):
+#    f = 1
+#    c = n
+#    if n >20:
+#        print('Digite um número menor doq 20')
+#    else:
+#        while c>0:
+#            print(f'{c}', end = '')
+#            print(f' x ' if c>1 else ' = ', end = '')
+#            f *=c
+#            c-=1
+#        print(f'{f}')
+#    print('fim do programa')
+#Fatorial(2)
 
