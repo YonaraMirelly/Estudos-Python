@@ -130,4 +130,61 @@
 #        print('Não existe apenas um único número que seja o mais barato!')    
 #MaisBarato(351,500,350)
 
+#turno = str(input("Digite o seu turno [M/V/N] -> "))
+#if turno == "M":
+#    print('Bom dia')
+#elif turno == "V":
+#    print('Boa tarde')
+#elif turno == "N":
+#    print('Boa noite')
+#else:
+#    print('Valor inválido')
+
+#def validar(turno):
+#    if turno == "M":
+#        print('Bom dia')
+#    elif turno == 'V':
+#        print("Boa tarde")
+#    elif turno == 'N':
+#        print('Boa noite')
+#    else:
+#        print("Valor inválido")
+#validar('N')
+
+#n = int(input('Digite um número-> '))
+#if n == 1:
+#    print('Domingo')
+#elif n == 2:
+#    print('Segunda')
+#elif n == 3:
+#    print('Terça')
+#elif n == 4:
+#    print('Quarta')
+#elif n == 5:
+#    print('Quinta')
+#elif n == 6:
+#    print("Sexta")
+#elif n == 7:
+#    print('Sábado')
+#else:
+#    print('Digite um número válido!')
+
+#   def Dia(n):
+#        if n == 1:
+#            print('domingo')
+#        elif n == 2:
+#            print('segunda')
+#        elif n == 3:
+#            print('terça')
+#        elif n == 4:
+#            print('quarta')
+#        elif n == 5:
+#            print('quinta')
+#        elif n == 6:
+#            print('sexta')
+#       elif n == 7:
+#            print('sábado')
+#        else:
+#            print("Digite um número válido!")
+#    Dia(7)
 
