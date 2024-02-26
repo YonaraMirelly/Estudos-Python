@@ -45,3 +45,31 @@
 #s = str(input('frase: '))
 #print(s.count('ado'))
 
+#dna = str(input('sequência -> ')).upper()
+#rna = ''
+#for letra in dna:
+#    if letra == "A":
+#        rna +="U"
+#    elif letra == 'G':
+#        rna +="C"
+#    elif letra == 'C':
+#        rna +="G"
+#    elif letra == "T":
+#        rna +="A"
+#print(rna)
+
+#def Transformar(dna):
+#    rna = ''
+#    for letra in dna:
+#        if letra == 'a':
+#            rna+="u"
+#        elif letra == "g":
+#            rna+="c"
+#        elif letra == "c":
+#            rna +="g"
+#        elif letra == "t":
+#            rna +="a"
+#    
+#    print(rna.upper())
+
+Transformar('agct')
