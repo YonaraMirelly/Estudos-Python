@@ -71,5 +71,9 @@
 #            rna +="a"
 #    
 #    print(rna.upper())
+#Transformar('agct')
 
-Transformar('agct')
+texto = 'ola maria mariana vamos nessa!'
+print(len(texto))
+novo = len(list(texto.replace(' ', '')))
+print(novo)
