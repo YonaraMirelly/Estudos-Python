@@ -77,3 +77,127 @@
 #    print(f'impar = {impar}')
 #Par([10,23,24,25,26])
 
+#temperaturas = []
+#meses = ['janeiro', 'fevereiro', 'março', 'abril', "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
+#for mes in meses:
+#    t = float(input(f'{mes} -> '))
+#    temperaturas.append(t)
+#soma = sum(temperaturas)
+#media = soma/12
+#print(f'a média é {media:.2f}')
+#print('temperatuta acima da média anual->')
+#for i, temperatura in enumerate(temperaturas):
+#    if temperatura> media:
+#        print(f'{meses[i]} -> {temperatura}°C')
+
+#from random import randint
+#m = []
+#dimensao = int(input('dimensão -> '))
+#for i in range(dimensao):
+#    nova_linha = []
+#    for j in range(dimensao):
+#        elemento = randint(1,10)
+#        nova_linha.append(elemento)
+#    m.append(nova_linha)
+#for i in range(dimensao):
+#    for j in range(dimensao):
+#        print(f'[{m[i][j]:^5}]', end = '')
+#    print()
+#print('='*40)
+#print('dobro')
+#for i in range(dimensao):
+#    for j in range(dimensao):
+#        print(f'[{m[i][j]*2:^5}]', end = '')
+#    print()
+
+
+#cont = 0
+#lista = []
+#while True:
+#    nota = float(input('nota -> '))
+#    cont+=1
+#    lista.append(nota)
+#    op = input('quer continuar? [S/N] ')
+#    if op == "N":
+#        break
+#    else:
+#        continue    
+#print(f'quantas notas -> {cont}')
+#print(f'informadas -> {lista}')
+#print('inversa: ')
+#inversa = lista[::-1]
+#for elemento in inversa:
+#    print(elemento)
+#soma = sum(lista)
+#media = soma/cont
+#print(f'soma = {soma}')
+#print(f'média = {media}')
+#for elemento in lista:
+#    if elemento > media:
+#        print(f'maior que a média: {elemento}')
+
+#lista = []
+#n = input('Telefonou para a vítima? ').upper()
+#n1 = input('Esteve no local do crime? ').upper()
+#n2 = input('Mora perto da vítima? ').upper()
+#n3 = input('Tínha dívidas com a vítima? ').upper()
+#n4 = input('já trabalhou com a vítima? ').upper()
+#lista.append(n)
+#lista.append(n1)
+#lista.append(n2)
+#lista.append(n3)
+#lista.append(n4)
+#if lista.count('SIM') == 2:
+#    print('você é suspeito')
+#elif 3<= lista.count('SIM') <= 4:
+#    print('você é cúmplice')
+#if lista.count('SIM') == 5:
+#    print('Assasino!')
+
+
+tot = 0
+votos = []
+while True:
+    print('''
+1 - windows
+2 - unix
+3 - linux
+4 - netware
+5 - mac
+6 - outro''')
+    voto = int(input('Voto -> '))
+    if voto > 6 or voto < 0:
+        print('digite um número válido!')
+    elif voto == 0:
+        break
+    else:
+        votos.append(voto)
+
+tot = len(votos)
+window = votos.count(1)
+unix = votos.count(2)
+linux = votos.count(3)
+netware = votos.count(4)
+mac = votos.count(5)
+outro = votos.count(6)
+
+percW = window/tot*100
+percU = unix/tot*100
+percL = linux/tot*100
+percN = netware/tot*100
+percM = mac/tot*100
+perO = outro/tot*100
+
+print(f'{tot} pessoas votaram!')
+print(f'Windows -> {percW:.2f}%')
+print(f'unix -> {percU:.2f}%')
+print(f'linux -> {percL:.2f}%')
+print(f'netware -> {percN:.2f}%')
+print(f'mac -> {percM:.2f}%')
+print(f'outro -> {perO:.2f}%')
+
+nomes = ['windows', 'unix', 'linux', 'netware', 'mac', 'outro']
+porcentagens = [percW, percU, percL, percN, percM, perO]
+maior_porcentagem = max(porcentagens)
+indice = porcentagens.index(maior_porcentagem)
+print(f'{nomes[indice]} ganhou com {maior_porcentagem}%!!!!!!!!!!!!!!!!!!!!!!!')
