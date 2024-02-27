@@ -40,9 +40,22 @@
 #    return quadrado
 #print(Quadrado(11))
 
-def Digito(numero):
-    s = str(numero)
-    a = len(s)
-    return a
+#def Digito(numero):
+#    s = str(numero)
+#    a = len(s)
+#   return a
+#print(Digito(12349))
 
-print(Digito(12349))
+#def Retorna(numero):
+#    if numero >0:
+#        return 'P'
+#    else:
+#        return "N"
+#print(Retorna(-2))
+
+#def Inverso(numero):
+#    s = str(numero)
+#    inverso = s[::-1]
+#    return inverso
+#print(Inverso(123))
+
