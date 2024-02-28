@@ -122,3 +122,80 @@
 #gerenciador.Criar([a1,a2], 'projeto 1')
 #gerenciador.Criar([a1], 'Projeto 1')
 
+#class Produto:
+#    qtde = 0
+#    def __init__(self, codigo, preço):
+#        self.__codigo = codigo
+#        self.__preço = preço
+#        Produto.qtde+=1
+#    def Get(self):
+#        return self.__preço
+#    def Set(self, valor):
+#        novo = self.__preço + valor
+#        return novo
+#a = Produto('1', 10)
+#b = Produto('2', 20)
+#print(f'preço a - {a.Get()}')
+#print(f'preço de b - {b.Get()}')
+#print(f'novo de A - {a.Set(50)}')
+#print(f'quantidade - {Produto.qtde}')
+
+#class Ponto:
+#    def __init__(self, nome, a, b):
+#        self.nome = nome
+#        self.a = a
+#        self.b = b
+#    def __str__(self):
+#        return f'{self.a} - {self.b}'
+#p1 = Ponto('A', 100, 200)
+#p2 = Ponto('B', 130, 150)
+#p3 = Ponto('C', 500, 239)
+#p4 = Ponto('outro', 199, 54)
+#lista = [p1, p2, p3, p4]
+#for elemento in lista:
+#    print(elemento)
+
+class Biblioteca:
+    def __init__(self, titulo, autor):
+        self.titulo = titulo
+        self.autor = autor
+    
+    def Alugar(self):
+        if self.alugado:
+            print('já alugado')
+        else:
+            self.alugado = True
+            print('livro foi alugado')
+    def Devolver(self):
+        if self.alugado:
+            self.alugado = False
+            print('livro foi devolvido')
+        else:
+            print('livro não está alugado!')
+class Livro:
+    def __init__(self):
+        self.livros_disponiveis = []
+        self.livros_alugados = []
+    def Adicionar_livro(self, livro):
+        self.livros_disponiveis(livro)
+    def Alugar_livro(self, titulo):
+        for livro in self.livros_disponiveis:
+            if livro.titulo == titulo:
+                livro.alugar
+                self.livros_disponiveis.remove(livro)
+                self.livros_alugados.append(livro)
+                return
+        print('livro não disponível no momento')
+    
+    def Devolver(self, titulo):
+        for livro in self.livros_alugados:
+            if livro.titulo == titulo:
+                livro.Devolver()
+                self.livros_alugados.remove(livro)
+                self.livros_disponiveis.append(livro)
+                return
+    
+    def Livro_mais_alugado(self):
+        if not self.livros_alugados:
+            return None
+        return max(self.livros_alugados, key=lambda livro:self.livros_alugados.count(livro)).titulo
