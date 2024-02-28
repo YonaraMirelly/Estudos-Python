@@ -155,47 +155,158 @@
 #for elemento in lista:
 #    print(elemento)
 
-class Biblioteca:
-    def __init__(self, titulo, autor):
-        self.titulo = titulo
-        self.autor = autor
-    
-    def Alugar(self):
-        if self.alugado:
-            print('já alugado')
-        else:
-            self.alugado = True
-            print('livro foi alugado')
-    def Devolver(self):
-        if self.alugado:
-            self.alugado = False
-            print('livro foi devolvido')
-        else:
-            print('livro não está alugado!')
-class Livro:
-    def __init__(self):
-        self.livros_disponiveis = []
-        self.livros_alugados = []
-    def Adicionar_livro(self, livro):
-        self.livros_disponiveis(livro)
-    def Alugar_livro(self, titulo):
-        for livro in self.livros_disponiveis:
-            if livro.titulo == titulo:
-                livro.alugar
-                self.livros_disponiveis.remove(livro)
-                self.livros_alugados.append(livro)
-                return
-        print('livro não disponível no momento')
-    
-    def Devolver(self, titulo):
-        for livro in self.livros_alugados:
-            if livro.titulo == titulo:
-                livro.Devolver()
-                self.livros_alugados.remove(livro)
-                self.livros_disponiveis.append(livro)
-                return
-    
-    def Livro_mais_alugado(self):
-        if not self.livros_alugados:
-            return None
-        return max(self.livros_alugados, key=lambda livro:self.livros_alugados.count(livro)).titulo
+#class Biblioteca:
+#    def __init__(self, titulo, autor):
+#        self.titulo = titulo
+#        self.autor = autor
+#    def Alugar(self):
+#        if self.alugado:
+#            print('já alugado')
+#        else:
+#            self.alugado = True
+#            print('livro foi alugado')
+#    def Devolver(self):
+#        if self.alugado:
+#            self.alugado = False
+#            print('livro foi devolvido')
+#        else:
+#            print('livro não está alugado!')
+#class Livro:
+#    def __init__(self):
+#        self.livros_disponiveis = []
+#        self.livros_alugados = []
+#    def Adicionar_livro(self, livro):
+#        self.livros_disponiveis(livro)
+#    def Alugar_livro(self, titulo):
+#        for livro in self.livros_disponiveis:
+#            if livro.titulo == titulo:
+#                livro.alugar
+#                self.livros_disponiveis.remove(livro)
+#                self.livros_alugados.append(livro)
+#                return
+#        print('livro não disponível no momento')
+#    def Devolver(self, titulo):
+#        for livro in self.livros_alugados:
+#            if livro.titulo == titulo:
+#                livro.Devolver()
+#                self.livros_alugados.remove(livro)
+#                self.livros_disponiveis.append(livro)
+#                return
+#    def Livro_mais_alugado(self):
+#        if not self.livros_alugados:
+#            return None
+#        return max(self.livros_alugados, key=lambda livro:self.livros_alugados.count(livro)).titulo
+
+
+#class Ingresso:
+#    def __init__(self, valor):
+#        self.valor = valor
+#    def Imprime(self):
+#        return self.valor
+#class VIP(Ingresso):
+#    def __init__(self, valor, adicional):
+#        super().__init__(valor)
+#        self.adicional = adicional
+#    def Aumento(self):
+#        novo = self.valor + self.adicional
+#        return novo
+#v1 = VIP(100, 50)
+#print(f'Seu ingresso normal vale {v1.Imprime()} e o vip vale {v1.Aumento()}')
+
+
+#class Forma:
+#    def __init__(self):
+#        self.area = 0
+#        self.perimetro = 0
+#class Retangulo(Forma):
+#    def __init__(self, a, b):
+#        super().__init__()
+#        self.a = a
+#        self.b = b
+#    def CalculaArea(self):
+#        self.area = self.a * self.b
+#        return self.area
+#    def CalcuraPerimetro(self):
+#        self.perimetro = (2*self.a) + (2*self.b)
+#        return self.perimetro
+#class Triangulo(Forma):
+#    def __init__(self, base, altura, c):
+#        super().__init__()
+#        self.base = base
+#        self.altura = altura
+#        self.c = c
+#    def CalculaArea(self):
+#        self.area = self.base * self.altura / 2
+#        return self.area
+#    def CalculaPerimetro(self):
+#        self.perimetro = self.base +self.altura + self.c
+#        return self.perimetro
+
+#retangulo = Retangulo(2,4)
+#triangulo = Triangulo(4,5,1)
+#print(f'area do retangulo - {retangulo.CalculaArea()}')
+#print(f'perimetro do retangulo - {retangulo.CalcuraPerimetro()}')
+#print(f'area do triangulo - {triangulo.CalculaArea()}')
+#print(f'perimetro do triangulo - {triangulo.CalculaPerimetro()}')
+
+#class Atleta:
+#    def __init__(self, nome, idade):
+#        self.nome = nome
+#        self.idade = idade
+#    def Aposentar(self):
+#        if self.idade>60:
+#            print('aposentar')
+#        else:
+#            print('não aposentar')
+#    def Aquecer(self):
+#        return f'{self.nome} aquecendo...'
+#class Corredor(Atleta):
+#    def correr(self):
+#        return f'{self.nome} correndo...'
+#class Nadador(Atleta):
+#    def nadar(self):
+#        return f'{self.nome} nadando...'
+#class Ciclista(Atleta):
+#    def pedalar(self):
+#        return f'{self.nome} pedalandi...'3
+#class TRI(Corredor, Nadador, Ciclista):
+#    pass
+#tri = TRI('joao', 25)
+#print(tri.Aposentar())
+#print(tri.Aquecer())
+#print(tri.correr())
+#print(tri.nadar())
+
+#class Conta:
+#    def __init__(self, saldo):
+#        self.saldo = saldo
+#    def depositar(self, valor):
+#        novo = self.saldo + valor
+#        return novo
+#    def saque(self, valor):
+#        if self.saldo>valor:
+#            self.saldo-=valor
+#        else:
+#            print('saldo insuficiente!')
+#    def exibir(self):
+#        print(f'saldo de R${self.saldo}')
+#class ContaCorrente(Conta):
+#    def __init__(self, saldo, taxa):
+#        super().__init__(saldo)
+#        self.taxa = taxa
+#    def desconto(self):
+#        self.saldo-=self.taxa
+#class Poupança(Conta):
+#    def __init__(self, saldo, rendimento):
+#        super().__init__(self, saldo)
+#        self.rendimento = rendimento
+#    def Rendiment(self):
+#        self.saldo * (1+self.rendimento/100)
+#class ContaImposto(Conta):
+#    def __init__(self, saldo, imposto):
+#        super().__init__(saldo)
+#        self.imposto = imposto
+#    def CalculaImposto(self):
+#        imposto = self.saldo *(self.imposto/100)
+#        return imposto
+
