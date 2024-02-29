@@ -197,3 +197,36 @@
 #maior_porcentagem = max(porcentagens)
 #indice = porcentagens.index(maior_porcentagem)
 #print(f'{nomes[indice]} ganhou com {maior_porcentagem}%!!!!!!!!!!!!!!!!!!!!!!!')
+
+from random import randint
+matriz = []
+
+for l in range(3):
+    novalinha = []
+    for c in range(3):
+        elemento = randint(1,3)
+        novalinha.append(elemento)
+    matriz.append(novalinha)
+
+for l in range(3):
+    for c in range(3):
+        print(f'[{matriz[l][c]:9.2f}]', end = '')
+    print()
+
+print('trocando a segunda linha, pela terceira')
+
+matriz[1], matriz[0] = matriz[0], matriz[1]
+
+for l in range(3):
+    for c in range(3):
+        print(f'[{matriz[l][c]:9.2f}]', end = '')
+    print()
+
+print('trocando a primeira coluna pela terceira')
+for l in range(3):
+    matriz[l][0], matriz[l][2] = matriz[l][2], matriz[l][0]
+
+for l in range(3):
+    for c in range(3):
+        print(f'[{matriz[l][c]:9.2f}]', end = '')
+    print()
