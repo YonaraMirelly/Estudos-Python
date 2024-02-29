@@ -155,49 +155,45 @@
 #    print('Assasino!')
 
 
-tot = 0
-votos = []
-while True:
-    print('''
-1 - windows
-2 - unix
-3 - linux
-4 - netware
-5 - mac
-6 - outro''')
-    voto = int(input('Voto -> '))
-    if voto > 6 or voto < 0:
-        print('digite um número válido!')
-    elif voto == 0:
-        break
-    else:
-        votos.append(voto)
-
-tot = len(votos)
-window = votos.count(1)
-unix = votos.count(2)
-linux = votos.count(3)
-netware = votos.count(4)
-mac = votos.count(5)
-outro = votos.count(6)
-
-percW = window/tot*100
-percU = unix/tot*100
-percL = linux/tot*100
-percN = netware/tot*100
-percM = mac/tot*100
-perO = outro/tot*100
-
-print(f'{tot} pessoas votaram!')
-print(f'Windows -> {percW:.2f}%')
-print(f'unix -> {percU:.2f}%')
-print(f'linux -> {percL:.2f}%')
-print(f'netware -> {percN:.2f}%')
-print(f'mac -> {percM:.2f}%')
-print(f'outro -> {perO:.2f}%')
-
-nomes = ['windows', 'unix', 'linux', 'netware', 'mac', 'outro']
-porcentagens = [percW, percU, percL, percN, percM, perO]
-maior_porcentagem = max(porcentagens)
-indice = porcentagens.index(maior_porcentagem)
-print(f'{nomes[indice]} ganhou com {maior_porcentagem}%!!!!!!!!!!!!!!!!!!!!!!!')
+#tot = 0
+#votos = []
+#while True:
+#    print('''
+#1 - windows
+#2 - unix
+#3 - linux
+#4 - netware
+#5 - mac
+#6 - outro''')
+#    voto = int(input('Voto -> '))
+#    if voto > 6 or voto < 0:
+#        print('digite um número válido!')
+#    elif voto == 0:
+#        break
+#    else:
+#        votos.append(voto)
+#tot = len(votos)
+#window = votos.count(1)
+#unix = votos.count(2)
+#linux = votos.count(3)
+#netware = votos.count(4)
+#mac = votos.count(5)
+#outro = votos.count(6)
+#percW = window/tot*100
+#percU = unix/tot*100
+#percL = linux/tot*100
+#percN = netware/tot*100
+#percM = mac/tot*100
+#perO = outro/tot*100
+#print(f'{tot} pessoas votaram!')
+#print(f'Windows -> {percW:.2f}%')
+#print(f'unix -> {percU:.2f}%')
+#print(f'linux -> {percL:.2f}%')
+#print(f'netware -> {percN:.2f}%')
+#print(f'mac -> {percM:.2f}%')
+#print(f'outro -> {perO:.2f}%')
+#nomes = ['windows', 'unix', 'linux', 'netware', 'mac', 'outro']
+#porcentagens = [percW, percU, percL, percN, percM, perO]
+#maior_porcentagem = max(porcentagens)
+#indice = porcentagens.index(maior_porcentagem)
+#print(f'{nomes[indice]} ganhou com {maior_porcentagem}%!!!!!!!!!!!!!!!!!!!!!!!')

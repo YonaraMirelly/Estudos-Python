@@ -70,13 +70,13 @@
 #def Impar():
 #    l = []
 #    while True:
-#        n = int(input('núemro-> '))
+#        n = int(input('número-> '))
 #        sair = int(input('sair? [99] '))
 #        if sair == 99:
 #            break
 #        elif n%2 == 0 or n<0:
 #            continue
- #       l.append(n)
+#       l.append(n)
 #    print(f'{l} são numeros impares positivos.')
 #Impar()
 
@@ -129,7 +129,7 @@
 #    while contador <n:
 #        divisor = 2
 #        while divisor < numero:
-#            if numero %divisor ==0:
+#            if numero % divisor == 0:
 #                break
 #            divisor+=1
 #        else:

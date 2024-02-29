@@ -43,7 +43,7 @@
 #Maneiro('poly')
 
 #s = str(input('frase: '))
-#print(s.count('ado'))
+#print(s.count('ado'))  
 
 #dna = str(input('sequência -> ')).upper()
 #rna = ''
