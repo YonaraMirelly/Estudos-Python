@@ -73,3 +73,18 @@
 #    print(rna.upper())
 #Transformar('agct')
 
+from random import randint
+print("joguinho")
+cont = 0
+pc = randint(1,3)
+while True:
+    j = int(input('numero -> '))
+    cont +=1
+    if j > pc:
+        print(f'um pouco menos')
+    elif j < pc:
+        print(f'um pouco mais')
+    elif j == pc:
+        break
+print(f'Você acertou com {cont} tentativas...')
+print(f'voce digitou {j} e o pc tbm digitou {pc}!!')
