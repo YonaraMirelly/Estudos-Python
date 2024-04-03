@@ -2,6 +2,7 @@ total = int(input())
 n = int(input())
 if 1 <= total <= 100 and 1 <= n <=300:
     lista = [i for i in range(1, total +1)]
+    print(lista)
     contador = 0
     for _ in range(n):
         figurinha = int(input('dale -> '))
