@@ -10,4 +10,4 @@ elif 3<=venceu<5:
 elif 1<=venceu<3:
     print(3)
 elif venceu<1:
-    print(-1)
+    print(-1) 
