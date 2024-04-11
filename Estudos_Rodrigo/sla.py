@@ -1,14 +1,12 @@
-tamanho = int(input("Informe qntd de fig "))
-lista = list(range(1, tamanho + 1))
 
-figsCompradas = int(input("Quantas figs compradas?"))
 
-contador = 0
-for x in range(figsCompradas):
-    fig = int(input("Qual comprou "))
-    if fig in lista:
-        lista.remove(fig)
-        contador += 1
+def fib(n, dic = {}):
+    if n in dic:
+        return dic[n]
+    elif n <=2:
+        return 1
+    else:
+        dic[n] = fib(n-1, dic)+fib(n-2, dic)
+        return dic[n]
 
-restantes = tamanho - contador
-print(restantes)
+print(fib(50))
