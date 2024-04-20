@@ -17,4 +17,15 @@
 #     return maior_resto
 
 # print(maior('123', 0))
+def main(x, y):
+    result = 1
+    for _ in range(y):
+        result *= x
+    return result
+
+if __name__ == "__main__":
+    x, y = [float(i) for i in input().split()]
+    y = int(y)
+    result = main(x, y)
+    print(f"{result:.4f}")
 

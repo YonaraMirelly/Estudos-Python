@@ -1,12 +1,12 @@
 ### Primeira Questão -> 
-# def Comb_recursivo(n,k):
-#     if k == 1:
-#         return n
-#     elif k == n:
-#         return 1
-#     elif 1< k <n:
-#         return Comb_recursivo(n-1, k-1) + Comb_recursivo(n-1, k)
-# print(Comb_recursivo(4,3))
+def Comb_recursivo(n,k):
+    if k == 1:
+        return n
+    elif k == n:
+        return 1
+    elif 1< k <n:
+        return Comb_recursivo(n-1, k-1) + Comb_recursivo(n-1, k)
+print(Comb_recursivo(5,3))
 # def Comb_nao(n,k):
 #     if k ==0 or k==n:
 #         return 1
@@ -27,13 +27,13 @@
 # print(F(3))
 
 ## Terceira Questão ->
-def RaizQ(x, xo, e):
-    if (xo**2)-x <= e:
-        return xo
-    else:
-        return RaizQ(x, (xo**2 + x) / 2*xo, e)
+# def RaizQ(x, xo, e):
+#     if (xo**2)-x <= e:
+#         return xo
+#     else:
+#         return RaizQ(x, (xo**2 + x) / 2*xo, e)
 
-print(RaizQ(13, 3.5, 0.001))
+# print(RaizQ(13, 3.5, 0.001))
 
 ### Quarta Questão -> 
 # def A(m, n):
