@@ -1,12 +1,12 @@
 ### Primeira Questão -> 
-def Comb_recursivo(n,k):
-    if k == 1:
-        return n
-    elif k == n:
-        return 1
-    elif 1< k <n:
-        return Comb_recursivo(n-1, k-1) + Comb_recursivo(n-1, k)
-print(Comb_recursivo(5,3))
+# def Comb_recursivo(n,k):
+#     if k == 1:
+#         return n
+#     elif k == n:
+#         return 1
+#     elif 1< k <n:
+#         return Comb_recursivo(n-1, k-1) + Comb_recursivo(n-1, k)
+# print(Comb_recursivo(5,3))
 # def Comb_nao(n,k):
 #     if k ==0 or k==n:
 #         return 1
@@ -15,16 +15,25 @@ print(Comb_recursivo(5,3))
 #         result *= (n-i+1)
 #         result //=i
 #     return result
-# print(Comb_nao(4,3))
+# print(Comb_nao(5,3))
 
 ### Segunda Questão -> 
+# def Maior(v, i=0, maior=0):
+#     if i == len(v):
+#         return maior
+#     else:
+#         if v[i] > maior:
+#             maior = v[i]
+#         return Maior(v, i+1, maior)
+
+# print(Maior([99,2,3000,18,990])) ok
 # def F(n):
 #     if n < 4:
 #         return 3 * n
 #     else:
 #         return 2*F(n-4)+5
-    
-# print(F(3))
+# print(F(7))
+# print(F(3)) ok
 
 ## Terceira Questão ->
 # def RaizQ(x, xo, e):
@@ -44,19 +53,36 @@ print(Comb_recursivo(5,3))
 #     elif m>0 and n>0:
 #         return A(m-1, A(m, n-1))
 
-# print(A(1,2))
+# print(A(1,2)) ok
 
 ### Sexta Questão -> 
 # def f(x,n):
 #     if n == 0:
 #         return 1
-#     elif n % 2 == 0:
-#         temp = f(x, n//2)
-#         return temp * temp
+#     if n == 1:
+#         return x
 #     else:
-#         temp = f(x, (n-1)//2)
-#         return x * temp * temp
-    
+#         return x * f(x, n-1)
+# print(f(2, 3))
 # print(f(5, 2))
 
 ### Sétima Questão -> 
+# def fat(n):
+#     if n <= 1:
+#         return 1
+#     else:
+#         return n * fat(n-1)
+# print(fat(5))
+
+# def Permutaçao(v, p = ''):
+#     if len(v) == 1:
+#         print(p + v[0])
+#     else:
+#         for indice, simbolo in enumerate(v):
+#             restante = v[:indice] + v[indice+1:]
+#             Permutaçao(restante, p+simbolo)
+#     return ''
+
+# print(Permutaçao(['a', 'b', 'c']))
+
+### Oitava questão ->
