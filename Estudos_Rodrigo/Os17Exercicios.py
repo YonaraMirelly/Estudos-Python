@@ -170,3 +170,26 @@
 #         return resto(x-y, y)
 
 # print(resto(17, 2))
+
+### 16 -> 
+# def ad(array, array2):
+#     if not array:
+#         return array2
+#     if not array2:
+#         return array
+#     if array[0] in array2:
+#         array2.remove(array[0])
+#     return [array[0]] + ad(array[1:], array2)
+
+# print(ad([1,1], [2,2]))
+
+### 17 ->
+# def conjunto(l):
+#     if not l:
+#         return [[]]
+#     else:
+#         elemento = l[0]
+#         resto = conjunto(l[1:])
+#     return resto + [[elemento]+ subconjunto for subconjunto in resto]
+
+# print(conjunto(['a', 'b', 'c']))
