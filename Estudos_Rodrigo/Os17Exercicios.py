@@ -86,3 +86,87 @@
 # print(Permutaçao(['a', 'b', 'c']))
 
 ### Oitava questão ->
+# def placar(m, n, prox=''):
+#     if m ==0 and n ==0:
+#         print(prox)
+#         return ''
+#     if m > 0:
+#         placar(m-1, n, prox + "A")
+#     if n > 0:
+#         placar(m, n-1, prox + "B")
+    
+# print(placar(3, 1))
+
+### Nona questão ->
+# def calcula(x, n):
+#     if n == 1:
+#         return x
+#     else:
+#         return x + calcula(x, n-1)
+# print(calcula(2,5))
+
+### Décima questão ->
+# def soma(array, i=0):
+#     if i == len(array):
+#         return 0
+#     else:
+#         return array[i] + soma(array, i+1)
+    
+# print(soma([1,2,3]))
+
+### 11 ->
+# def inverter(array, i=0, nova=[]):
+#     if i < len(array):
+#         inverter(array, i+1, nova)
+#         nova += [array[i]]
+#     return nova
+# print(inverter([1, 2, 3]))
+
+### 12 ->
+# def qtde(k, numero):
+#     if numero == 0:
+#         return 0
+#     ultimo_digito = numero % 10
+#     if ultimo_digito == k:
+#         return 1 + qtde(k , numero // 10)
+#     else:
+#         return qtde(k , numero // 10)
+    
+# print(qtde(2, 120))
+
+### 13 -> 
+# def binario(n):
+#     if n == 0:
+#         return '0'
+#     elif n == 1:
+#         return '1'
+#     else:
+#         binarios = binario(n//2)
+#         return binarios + str(n%2)
+# print(binario(5))
+
+### 14 -> 
+# def mdc(x, y):
+#     if y == x:
+#         return x
+#     if x == 0:
+#         return y
+#     if y == 0:
+#         return x
+#     if x>y:
+#         return mdc(x-y, y)
+#     else:
+#         return mdc(y,x)
+
+# print(mdc(6, 3))
+
+### 15 ->
+# def resto(x, y):
+#     if x == y:
+#         return 0
+#     elif x < y:
+#         return x
+#     elif x>y:
+#         return resto(x-y, y)
+
+# print(resto(17, 2))
