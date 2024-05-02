@@ -1,33 +1,42 @@
-# Função para verificar se uma parte do navio já foi destruída
-def parte_destruida(tabuleiro, linha, coluna):
-    if tabuleiro[linha][coluna] == '.':
-        return True
-    return False
 
-# Função para verificar se um disparo atinge uma parte do navio
-def atingir_navio(tabuleiro, linha, coluna):
-    if tabuleiro[linha][coluna] == '#':
-        return True
-    return False
+def identificar(tabuleiro, i, j, linha, coluna, identificador):
+    celulas = 0
+    # caso base para a borda
+    if i < linha and i >= 0 and j < coluna and j >=0:
+        #caso base para o navio já identificado ou água
+        if tabuleiro[i][j] == '#':
+            tabuleiro[i][j] == identificador
+            celulas +=1
+            # indo para a direita
+            celulas += identificar(tabuleiro, i, j+1,  identificador, linha, coluna)
+            # indo para baixo
+            celulas += identificar(tabuleiro, i+1, j, identificador, linha, coluna)
+            # indo para esquerda
+            celulas += identificar(tabuleiro, i, j-1, identificador, linha, coluna)
+            # indo para cima
+            celulas += identificar(tabuleiro, i-1, j,  identificador, linha, coluna)
 
-# Função principal para determinar o número de navios destruídos
-def contar_navios_destruidos(tabuleiro, disparos):
-    navios_destruidos = 0
-    for disparo in disparos:
-        linha, coluna = disparo
-        if atingir_navio(tabuleiro, linha-1, coluna-1) and not parte_destruida(tabuleiro, linha-1, coluna-1):
-            navios_destruidos += 1
-            tabuleiro[linha-1][coluna-1] = '.'  # Atualizar o tabuleiro para indicar a parte destruída do navio
-    return navios_destruidos
+    return celulas
+def principal():
+    linha, coluna = [int(i) for i in input().split()]
+    tabuleiro = [[j for j in input()] for _ in range(linha)]
+    tiros = int(input())
+    tamanhos_dic = {}
+    identificare = 0
+    for _ in range(tiros):
+        # -1 pois a matriz começa com 0 na minha conta kk
+        i, j  = [int(x)-1 for x in input().split()]
+        if tabuleiro[i][j] == '#':
+            tamanho_navio = identificar(tabuleiro, i, j, identificador, linha, coluna)
+            tamanhos_dic[identificador] = tamanho_navio - 1 
+            identificare += 1
+        elif tabuleiro[i][j] != '.':
+            tamanhos_dic[tabuleiro[i][j]] -= 1
+    destruidos = 0
+    for tamanho in tamanhos_dic.values():
+        if tamanho == 0:
+            destruidos += 1
+    print(destruidos)
 
-# Leitura da entrada
-N, M = map(int, input().split())
-tabuleiro = [list(input()) for _ in range(N)]
-K = int(input())
-disparos = [tuple(map(int, input().split())) for _ in range(K)]
-
-# Contar navios destruídos
-navios_destruidos = contar_navios_destruidos(tabuleiro, disparos)
-
-# Imprimir o resultado
-print(navios_destruidos)
+if __name__ == '__main__':
+    principal()
