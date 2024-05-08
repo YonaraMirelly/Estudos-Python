@@ -1,23 +1,16 @@
-def main():
-    n = int(input())
-    matriz = []
-    for i in range(n):
-        matriz += [[int(j) for j in input().split()]]
+qtde = int(input())
+lista = []
+for _ in range(qtde):
+    numero = int(input())
+    lista += [numero]
 
-    max_peso = 0
-    for i in range(n):
-        linha_soma = 0
-        for j in range(n):
-            linha_soma += matriz[i][j]
-        for j in range(n):
-            coluna_soma = 0
-            for k in range(n):
-                coluna_soma += matriz[k][j]
-            peso = linha_soma + coluna_soma - 2 * matriz[i][j]
-            if peso > max_peso:
-                max_peso = peso
+junto = int(''.join(str(num) for num in lista))
+dic = {}
+cont = 0
+for i in range(0, 9):
+    if i in junto:
+        cont +=1
+        dic[i] = cont
 
-    return max_peso    
-            
-if __name__ == "__main__":
-    print(main())
+for chave, valor in dic:
+    print('f{chave} - {valor}')
