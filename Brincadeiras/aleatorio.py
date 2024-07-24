@@ -1,5 +1,108 @@
-emprestimo = float(input('valor do emprestimo - '))
-juros = emprestimo + (emprestimo * 20 / 100)
-print('valor do emprestimo com juros - ', juros)
-parcelar = int(input('você quer parcelar em quantas vezes? '))
-print(f'vc pagará {juros/parcelar} todos os meses ate acabar amg.')
+import time
+
+
+def maioridade(idade):
+    if idade >= 21:
+        return 'vc eh tem mais de 21 anos.'
+    else:
+        return 'vc ainda eh menor de idade, ou seja, menos de 21 anos.'
+
+def idade(ano_atual, nasceu):
+    idade = int(ano_atual - nasceu)
+    return idade
+
+# ano_atual = int(input('ano atual - '))
+# nasceu = int(input('ano de nascimento - '))
+# i = idade(ano_atual, nasceu)
+# print(maioridade(i))
+def par_impar(n):
+    if n%2 == 0:
+        return 'par'
+    else:
+        return 'impar'
+
+# n = int(input('numero - '))
+# print(par_impar(n))
+
+def imc(massa, altura):
+    imc = massa//(altura**2)
+    if 18.5 > imc < 25:
+        return 'peso ideal'
+    elif imc < 18.5:
+        return 'magro'
+    else:
+        return 'gordo'
+    
+# massa = float(input('massa - '))
+# altura = float(input('altura - '))
+# print(imc(massa, altura))
+
+def apto(idade):
+    if idade >= 18:
+        print('--------------')
+        print(f'idade = {idade}')
+        print('vc está apto a dirigir')
+        print('--------------')
+        return ''
+    else:
+        print('--------------')
+        print(f'idade = {idade} ')
+        print('vc não está apto a dirigir')
+        print('--------------')
+        return ''
+
+# ano_atual = int(input('ano atual - '))
+# nasceu = int(input('ano de nascimento - '))
+# i = idade(ano_atual, nasceu)
+# print(apto(i))
+
+def titulo(nome):
+    print('-'*20)
+    print(f'{nome}'.center(17))
+    print('-'*20)
+    return ''
+
+def passei(n1, n2):
+    media = (n1+n2)/2
+    if media >= 7:
+        print('-'*20)
+        print(f'Média: {media}')
+        print('vc passou')
+        print('-'*20)
+        return ''
+    elif media <7:
+        print('-'*20)
+        print(f'Média: {media}')
+        print('vc não passou')
+        print('-'*20)
+        return ''
+
+# n = input('Digite o título - ')
+# print(titulo(n))
+# n1 = float(input('Digite a nota 1 - '))
+# n2 = float(input('Digite a nota 2 - '))
+# print(passei(n1, n2))
+
+# c = 0
+# while c <=10:
+#     print(c)
+#     c += 1
+# print('eh sobre isso')
+
+soma = 0
+c = 1
+maior = None
+menor = None
+while c <= 10:
+    n = int(input(f'{c} número - '))
+    
+    if maior is None or n > maior:
+        maior = n
+    if menor is None or n < menor:
+        menor = n
+    
+    soma += n
+    c+=1
+print(soma)
+print(maior)
+print(f'menor - {menor}')
