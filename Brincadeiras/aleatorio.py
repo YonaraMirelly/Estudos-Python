@@ -89,20 +89,87 @@ def passei(n1, n2):
 #     c += 1
 # print('eh sobre isso')
 
-soma = 0
-c = 1
-maior = None
-menor = None
-while c <= 10:
-    n = int(input(f'{c} número - '))
+# soma = 0
+# c = 1
+# maior = None
+# menor = None
+# while c <= 10:
+#     n = int(input(f'{c} número - '))
     
-    if maior is None or n > maior:
-        maior = n
-    if menor is None or n < menor:
-        menor = n
+#     if maior is None or n > maior:
+#         maior = n
+#     if menor is None or n < menor:
+#         menor = n
     
-    soma += n
-    c+=1
-print(soma)
-print(maior)
-print(f'menor - {menor}')
+#     soma += n
+#     c+=1
+# print(soma)
+# print(maior)
+# print(f'menor - {menor}')
+
+# def fat(n):
+#     if n <= 1:
+#         return n
+#     else:
+#         return n * fat(n-1)
+
+# print(fat(8))
+
+# def tab(n):
+#     c = 0
+#     while c<=10:
+#         print(f'{n} x {c} = {n*c}')
+#         c+=1
+#     return ''
+# print(tab(int(input('quer ver qual número? '))))
+
+
+# c = 1
+# neg = 0
+# valores = []
+# while c<=5:
+#     n = int(input('numero - '))
+#     if n < 0:
+#         neg+=1
+#         valores += [n]
+#     c+=1
+# print(neg)
+# print(valores)
+
+# n = int(input('digite um numero - '))
+# c = n
+# f = 1
+# while True:
+#     print(c, end = ' - ')
+#     f *= c
+#     c -= 1
+#     if c == 0:
+#         break
+# print(f'o fatorial é {f}')
+
+# n = int(input('digite um numero - '))
+# c = 1
+# contdiv = 0
+# while c <= n:
+#     print(c, end = ' - ')
+#     if n % c == 0:
+#         contdiv +=1
+
+#     c+=1
+# if contdiv == 2:
+#     print('o número é primo! ')
+# else:
+#     print('o número não é primo! ') 
+
+# n = int(input())
+# tot = soma = 0
+
+# for i in range(1, 6+1):
+#     n = int(input('digite um valor - '))
+#     if n >= 0 and n <=10:
+#         tot += 1
+#         if n % 2 != 0:
+#             soma +=n
+
+# print(f'ao todo foraam {tot} valores entre 0 e 10.')
+# print(f'somando os valores impares foi {soma}')
