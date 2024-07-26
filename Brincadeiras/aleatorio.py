@@ -173,3 +173,24 @@ def passei(n1, n2):
 
 # print(f'ao todo foraam {tot} valores entre 0 e 10.')
 # print(f'somando os valores impares foi {soma}')
+
+
+# import time
+# inicio = time.time()
+# for c1 in range(1, 3+1):
+#     for c2 in range(1, 3+1):
+#         print(c1, c2)
+
+# fim = time.time()
+# print(f'durou {fim-inicio} seg')
+
+
+def sequencia(n):
+    lista = []
+    a, b = 0, 1
+    while len(lista) <= n:
+        lista += [a]
+        a, b = b, a+b
+    
+    return lista
+print(sequencia(5))
