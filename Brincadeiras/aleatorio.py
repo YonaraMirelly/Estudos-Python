@@ -191,6 +191,5 @@ def sequencia(n):
     while len(lista) <= n:
         lista += [a]
         a, b = b, a+b
-    
     return lista
 print(sequencia(5))
