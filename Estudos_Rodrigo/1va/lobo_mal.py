@@ -1,15 +1,8 @@
-def bfs(fazenda, visitado, x, y, R, C):
-    # Definindo movimentos possíveis (cima, baixo, esquerda, direita)
+def dfs(fazenda, visitado, x, y, R, C):
+    # movimentos possíveis (cima, baixo, esquerda, direita)
     movimentos = [(-1, 0), (1, 0), (0, -1), (0, 1)]
     
-    # Inicializar a fila manualmente
-    fila = []
-    fila_inicio = 0
-    fila_fim = 0
-    
-    # Enqueue a célula inicial
-    fila.append((x, y))
-    fila_fim += 1
+    stack = [(x, y)]
     ovelhas = 0
     lobos = 0
     
@@ -18,17 +11,13 @@ def bfs(fazenda, visitado, x, y, R, C):
     elif fazenda[x][y] == 'v':
         lobos += 1
     
-    visitado[x][y] = True
-    
-    while fila_inicio < fila_fim:
-        cx, cy = fila[fila_inicio]
-        fila_inicio += 1
+    while stack:
+        cx, cy = stack.pop()
         for dx, dy in movimentos:
             nx, ny = cx + dx, cy + dy
             if 0 <= nx < R and 0 <= ny < C and not visitado[nx][ny] and fazenda[nx][ny] != '#':
                 visitado[nx][ny] = True
-                fila.append((nx, ny))
-                fila_fim += 1
+                stack.append((nx, ny))
                 if fazenda[nx][ny] == 'k':
                     ovelhas += 1
                 elif fazenda[nx][ny] == 'v':
@@ -44,7 +33,8 @@ def resolver_fazenda(fazenda, R, C):
     for i in range(R):
         for j in range(C):
             if not visitado[i][j] and fazenda[i][j] != '#':
-                ovelhas, lobos = bfs(fazenda, visitado, i, j, R, C)
+                visitado[i][j] = True
+                ovelhas, lobos = dfs(fazenda, visitado, i, j, R, C)
                 if ovelhas > lobos:
                     ovelhas_total += ovelhas
                 else:
