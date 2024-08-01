@@ -13,7 +13,7 @@ def rali_dos_robos():
 
         # Direções: N=0, L=1, S=2, O=3
         mapa_direcoes = {'N': 0, 'L': 1, 'S': 2, 'O': 3} # mapeiar as direções para os índices de 0 a 3
-        movimentos_direcao = [(0, -1), (1, 0), (0, 1), (-1, 0)] # listar as mudanças de posição
+        movimentos_direcao = [(0, -1), (1, 0), (0, 1), (-1, 0)] # listar as mudanças de posição #esquerda - direita - cima - baixo
         direcao_atual = 0 # indica norte
         posicao_atual = (0, 0) # será atualizada
  
