@@ -61,7 +61,6 @@ def comparação(paciente1: Dict[str, int, str], paciente2: Dict[str, int, str])
     if paciente1['nome'].lower() < paciente2['nome'].lower():
         return 1
     return -1
-
 def partition(A, p, r):
     x = A[r]
     i = p-1
@@ -72,7 +71,6 @@ def partition(A, p, r):
 
     A[i+1], A[r] = A[r], A[i+1]
     return i+1
-
 #implementando no quick_sort()
 def quicksort(A, p, r):
     if p <= r:
