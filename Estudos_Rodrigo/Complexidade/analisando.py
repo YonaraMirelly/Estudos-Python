@@ -1,10 +1,32 @@
-def main():
-    lista = [float(i) for i in input().split()]
-    print(lista)
-    if lista[0] > lista[1]:
-        print('Pedro')
-    else:
-        print('Paulo')
+def misteriosa(n, s):
+    if len(s) == n:
+        print(s)
+        return
+    
+    for i in ('0', '1'):
+        a = s + i
+        misteriosa(n, a)
+        
+    return ''
+print('a forma do papel ->')
+print(misteriosa(5, ''))
 
-if __name__ == "__main__":
-    main()
+print('altenartivo -> ')
+def gerar_combinacoes_binarias(n):
+    # Inicializa a lista com uma string vazia
+    combinacoes = ['']
+    
+    # Itera para gerar combinações de comprimento 1 até n
+    for _ in range(n):
+        novas_combinacoes = []
+        for combinacao in combinacoes:
+            novas_combinacoes.append(combinacao + '0')
+            novas_combinacoes.append(combinacao + '1')
+        combinacoes = novas_combinacoes
+    
+    # Imprime todas as combinações
+    for combinacao in combinacoes:
+        print(combinacao)
+
+# Testa a função
+gerar_combinacoes_binarias(5)

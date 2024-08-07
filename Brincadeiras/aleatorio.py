@@ -1,17 +1,10 @@
-def pesquisa_binparia(lista, item):
-    baixo = 0
-    alto = len(lista)-1
-    while baixo <= alto:
-        meio = (baixo+alto)//2
-        chute = lista[meio]
-        if chute == item:
-            return meio
-        if chute > item:
-            alto = meio -1
+nome = 'yonara'
+def laço(nome, inicio = 0, fim = 0):
+    if inicio < len(nome):
+        if fim < len(nome):
+            print(nome[inicio:fim+1])
+            laço(nome, inicio, fim+1)
         else:
-            baixo = meio +1
-    
-    return None
+            laço(nome, inicio+1, inicio+1)
 
-minha = [1, 3, 5, 7, 9]
-print(pesquisa_binparia(minha, 3))
+print(laço(nome))
