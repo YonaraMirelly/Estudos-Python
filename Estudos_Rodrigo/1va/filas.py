@@ -1,22 +1,10 @@
-# def fila_final(N, identificadores, M, sairam):
-#     # Lista para armazenar o resultado final
-#     fila_final = []
+n = int(input()) #O(1)
+pessoas = [int(i) for i in input().split()] #O(1)
+n_retirados = int(input()) #O(1)
+retirados = [int(i) for i in input().split()] #O(1)
+
+for i in range(n_retirados): #O(n)
+    if retirados[i] in pessoas: #O(n)
+        pessoas = [a for a in pessoas if a != retirados[i]] #O(n)
     
-#     # Itera sobre a lista de identificadores
-#     for id_pessoa in identificadores:
-#         if id_pessoa not in sairam:
-#             fila_final.append(id_pessoa)
-    
-#     return fila_final
-
-# # Leitura da entrada
-# N = int(input().strip())
-# identificadores = list(map(int, input().strip().split()))
-# M = int(input().strip())
-# sairam = list(map(int, input().strip().split()))
-
-# # Calcula a fila final
-# resultado = fila_final(N, identificadores, M, sairam)
-
-# # Imprime o resultado
-# print(" ".join(map(str, resultado)))
+print(pessoas) #O(1)
