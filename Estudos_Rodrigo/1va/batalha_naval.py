@@ -1,4 +1,4 @@
-
+# ok
 def identificar(tabuleiro, i, j, linha, coluna, identificador):
     celulas = 0
     #  borda
@@ -15,9 +15,7 @@ def identificar(tabuleiro, i, j, linha, coluna, identificador):
             celulas += identificar(tabuleiro, i, j-1, linha, coluna, identificador)
             # indo para cima
             celulas += identificar(tabuleiro, i-1, j, linha, coluna, identificador)
-
     return celulas
-
 def main():
     linha, coluna = [int(i) for i in input().split()]
     tabuleiro = [[j for j in input()] for _ in range(linha)]
@@ -28,7 +26,6 @@ def main():
         # -1 pois a matriz começa com 0 na minha conta
         i, j  = [int(x)-1 for x in input().split()]
         tamanho_navio = identificar(tabuleiro, i, j, linha, coluna, identificador)
-
         if tamanho_navio > 0:
             dic[identificador] = tamanho_navio - 1 
             identificador += 1
@@ -40,6 +37,5 @@ def main():
         if tamanho == 0:
             destruidos += 1
     print(destruidos)
-
 if __name__ == "__main__":
     main()

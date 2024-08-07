@@ -1,4 +1,4 @@
-
+#ok
 def selection_sort(lista):
     for j in range(len(lista)-1):
         min_index = j

@@ -1,3 +1,4 @@
+# ok
 r1 = [int(i) for i in input().split()] #O(1)
 r2 = [int(i) for i in input().split()] #O(1)
 if r1[-1] and r1[-2] > r2[0] and r2[1] or r1 == r2: #O(n)

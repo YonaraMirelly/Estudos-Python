@@ -1,3 +1,4 @@
+# ok
 def ordenar_selecao(lista):
     """ Ordena a lista arr usando o algoritmo de ordenação por seleção. """
     n = len(lista)

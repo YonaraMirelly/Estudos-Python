@@ -1,3 +1,4 @@
+#ok
 def particionar(arr, baixo, alto):
     pivo = arr[alto]  # O pivô é o último elemento
     i = baixo - 1     # Índice do menor elemento

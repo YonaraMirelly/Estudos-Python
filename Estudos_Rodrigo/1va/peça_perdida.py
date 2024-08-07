@@ -11,5 +11,6 @@ realizando uma adição a cada iteração. Portanto, essa parte tem complexidade
 for i in incompleta: #O(n)
     soma_incompleta += i #O(n)
 falta = soma_completa - soma_incompleta #O(1)
+
 print(falta) #O(1)
 
