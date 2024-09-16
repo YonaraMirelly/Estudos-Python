@@ -1,6 +1,3 @@
-
-
-
 # print('Com 2 laços -> ')
 # nome = str(input('nome: '))
 # for i in range(len(nome)):
