@@ -1,7 +1,10 @@
-def reverse(s):
-    if len(s) == 0:
-        return ""
-    else:
-        return reverse(s[1:]) + s[0]
+m = {}
+for i in range(3):
+    for j in range(3):
+        m[i,j] = [0]
     
-print(reverse('yonara'))
+
+for i in range(3):
+    for j in range(3):
+        print(f'[{m[i,j]}]', end = ' ')
+    print()

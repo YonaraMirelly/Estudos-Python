@@ -13,7 +13,7 @@ def Apagar_menor(): #O(1)
                 c = 100 #O(1)
                 for j in digitos:  #O(n)
                     if j < c: #O(1)
-                        c = j #O(1)
+                        c = j #O(1)a
                 digitos.remove(c)  #O(n)
             casos += [digitos]  #O(n)
     for caso in casos:  #O(n) 

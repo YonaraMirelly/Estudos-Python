@@ -1,4 +1,4 @@
-# Utilização da implementação de fila feita em sala
+
 class No:
     def __init__(self, dado=None):
         self.dado = dado
@@ -47,7 +47,7 @@ class Fila:
             atual = atual.prox
         print()
 
-def solucao():
+def main():
     N = int(input())
     fila_inicial = list(map(int, input().split()))
 
@@ -76,4 +76,4 @@ def solucao():
 
     minha_fila.imprimir()
 
-solucao()
+main()
